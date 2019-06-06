@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<!--
+    form: es el ingreso de informacion del usuario al servidor.
+    CONTROLES DE FORMULARIO:
+    input+select+texttara+button+
+    firldset+label+legend+option
+
+
+-->
+<form>
+    <div>
+        <label for="nombre">Nombre</label>
+        <input type="text" placeholder="Ingrese su nombre" id="nombre">
+    </div>
+
+    <div>
+        <label for="edad">Edad</label>
+        <input type="number" placeholder="Ingrese su edad" id="edad">
+    </div>
+
+    <div>
+        <label for="email">Email</label>
+        <input type="email" placeholder="Ingrese su email" id="email">
+    </div>
+
+    <div>
+        <label for="password">Contraseña</label>
+        <input type="password" placeholder="Ingrese su contraseña" id="password">
+    </div>
+
+    <div>
+        <label for="nacionalidad">Nacionalidad</label>
+        <select  id="nacionalidad">
+            <option value="0">Elige una opcion</option>
+            <option value="ar">Argentina</option>
+            <option value="ve">Venezonalana</option>
+            <option value="ch">China</option>
+        </select>
+    </div>
+    <div>
+        <label for="comentarios">Comentarios</label>
+        <textarea  id="comentarios" ></textarea>
+    </div>
+    <div>
+        <label for="masc">Masculino</label>
+        <input type="radio" id="masc" name="genero">
+        <label for="fem">Femenino</label>
+        <input type="radio" id="fem" name="genero">
+    </div>
+    <div>
+        <label for="tou">Terminos y Condiciones</label>
+        <input type="checkbox" id="tou">
+
+    </div>
+    <div>
+    <input type="submit" value="Enviar">
+    </div>
+
+   <!-- <button >Enviar</button> -->  <!--Si esta dentro del formulario, es el boton enviar-->
+</form>
+
+<script src="formularios.js"></script>
+    
+</body>
+</html>
