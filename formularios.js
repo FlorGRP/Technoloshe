@@ -9,6 +9,8 @@ let input= document.querySelector("input")
 
 let nombre= document.querySelector("#nombre")
 
+//let divNac= document.querySelector("#nacionalidad")
+
 //Change: Se dispara cuando el control de un formulario cambia de valor
 
 
@@ -54,20 +56,47 @@ MAYUSCULAS Y MINUSCULAS
 
 //1)Seleccionar el <select>
 let select = document.querySelector("select")
+let divNac= select.parentNode
+let label = document.querySelector(#nac-label)
 //2)Asignarle un evento change
 select.addEventListener("change",cambio)
 //3)El callback del change tinen que poder agarrar el valor del select
 function cambio(){
     let valor =select.value
-    console.log(nacionalidad)
+    console.log(valor)
 
 //4)Con el valor obtenido, buscar en el objeto "paises" la propiedad que le corresponda
 
     let provincias = paises[valor]
+    console.log(provincias)
+    //TRUE O {FALSE |0| "" |NULL| undefined}
+
+    If (provincias){
+        let select_nuevo =document.createElement("select")
+
+        for (let i = 0; i < provincias.length; i++) {
+            let option= document.createElement("option")
+            option.innerText=provincias[i]
+            select_nuevo.appendChild(option)
+            
+        }
+        divNac.appendChild(select_nuevo)
+
+    }
+    else{
+        let p= document.createElement("p")
+        p.innerText="Tiene que seleccionar una opcion"
+        //p.style-color="red"
+        //p.id="error"
+        p.className="error"
+        //p.classList.add("error") No pisa el classname previo
+        document.body.appendChild(p)
+
+        divNac.insertBefore(p,label)
+    }
 
 
-
-
+/*
 //5)Si la propiedad no existe,se tiene que ver en pantalla un mensaje que diga "Tiene que
 //seleccionar una opcion" en color rojo.
 if (valor=0) {
@@ -87,4 +116,4 @@ else{
 
 //9)Agregar el <select> al DOM
 
- 
+ */
